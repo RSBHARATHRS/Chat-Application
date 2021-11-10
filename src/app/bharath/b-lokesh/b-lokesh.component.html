@@ -1,0 +1,26 @@
+<div class="msgsCnt">
+    <div class="recDpCnt">
+        <img class="profile-pic" [src]="receiverDp" width="60" height="60">
+        <div class="DpName">
+            <h2>Lokesh</h2>
+            <p>Last Seen</p>
+        </div>
+    </div>
+
+    <div class="actualMsgCnt">
+        <div *ngFor="let i of bLoki"
+            [ngClass]="{'receivedMsg':false, 'sendMsg': i.senderName=='Bharath', 'msgModel' :true}">
+            <div class="dp"><img class="profile-pic" [src]="receiverDp" width="50" height="50"></div>
+            <div class="msgContent">
+                <h3>{{i.senderName}}</h3>
+                <p>{{i.msg}}</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="inputHolder">
+        <div class="inputCnt">
+            <input type="text" #msg><button (click)="send(msg.value)"><img src="">Send</button>
+        </div>
+    </div>
+</div>
