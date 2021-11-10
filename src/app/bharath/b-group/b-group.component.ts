@@ -3,52 +3,53 @@ import { ChatDataService } from 'src/app/chat-data.service';
 import { ImgPathService } from 'src/app/img-path.service';
 
 @Component({
-  selector: 'app-b-nijantha',
-  templateUrl: './b-nijantha.component.html',
-  styleUrls: ['./b-nijantha.component.css']
+  selector: 'app-b-group',
+  templateUrl: './b-group.component.html',
+  styleUrls: ['./b-group.component.css']
 })
-export class BNijanthaComponent implements OnInit {
-
+export class BGroupComponent implements OnInit {
   senderName: string;
   senderDpPath: string;
+  groupDp: string;
   receiverName: string;
   receiverDp: string;
   imgPath: string;
 
   msgFlag: any;
 
-  tempChatArr: any;
+  groupArr: any;
   constructor(private chatService: ChatDataService, private imgPathService: ImgPathService) {
     this.senderName = "Bharath";
     this.senderDpPath = imgPathService.bharathDp;
-    this.receiverDp = imgPathService.nijanthaDp;
+    this.receiverDp = imgPathService.lokeshDp;
+    this.groupDp = imgPathService.groupDp;
     this.receiverName = "loki";
     this.imgPath = "";
 
     this.msgFlag = [];
-    this.tempChatArr = chatService.bhAndNijanthanChat;
+    this.groupArr = chatService.groupChat;
     console.log("b-loki constructor");
   }
 
   ngOnInit(): void {
+    console.log("on Init");
 
   }
 
   send(msg: any) {
     let date: Date = new Date();
     console.log(date.toString().slice(16, -31));
-
     let msgObj = {
       senderName: "Bharath",
       senderDpPath: this.senderDpPath,
       msg: msg,
       time: date.toString().slice(16, -31)
     }
+    this.groupArr.push(msgObj);
 
-    this.tempChatArr.push(msgObj);
-
-    console.log("pushed msg:", this.tempChatArr);
-    this.chatService.upDatebhLo(this.tempChatArr);
+    console.log("pushed msg:", this.groupArr);
+    this.chatService.upDatebhLo(this.groupArr);
   }
+
 
 }

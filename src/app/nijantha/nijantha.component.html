@@ -1,1 +1,28 @@
-<p>nijantha works!</p>
+<div class="container">
+    <div class="chatInterfaceCnt">
+        <div class="chatInterface">
+            <div class="chatBoxHeader">
+                <h1>WhatsApp</h1>
+            </div>
+            <div class="contactListCnt">
+                <a routerLinkActive="active" routerLink="group" class="chatListCard">
+                    <img class="profile-pic" [src]="groupDp" alt="profile pic" width="60" height="60">
+                    <h3>Group Chat</h3>
+                </a>
+
+                <a routerLinkActive="active" routerLink="lokesh" class="chatListCard">
+                    <img class="profile-pic" [src]="lokeshDp" alt="profile pic" width="60" height="60">
+                    <h3>Lokesh</h3>
+                </a>
+
+                <a routerLinkActive="active" routerLink="bharath" class="chatListCard">
+                    <img class="profile-pic" [src]="bharathDp" alt="profile pic" width="60" height="60">
+                    <h3>Bharath</h3>
+                </a>
+            </div>
+            <div class="messageContainer">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

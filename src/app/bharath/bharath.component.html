@@ -6,7 +6,7 @@
             </div>
             <div class="contactListCnt">
                 <a routerLinkActive="active" routerLink="group" class="chatListCard">
-                    <img class="profile-pic" [src]="lokeshDp" alt="profile pic" width="60" height="60">
+                    <img class="profile-pic" [src]="groupDp" alt="profile pic" width="60" height="60">
                     <h3>Group Chat</h3>
                 </a>
 
@@ -14,6 +14,7 @@
                     <img class="profile-pic" [src]="lokeshDp" alt="profile pic" width="60" height="60">
                     <h3>Lokesh</h3>
                 </a>
+
                 <a routerLinkActive="active" routerLink="nijantha" class="chatListCard">
                     <img class="profile-pic" [src]="nijanthaDp" alt="profile pic" width="60" height="60">
                     <h3>Nijantha</h3>
@@ -21,7 +22,6 @@
             </div>
             <div class="messageContainer">
                 <router-outlet></router-outlet>
-
             </div>
         </div>
     </div>

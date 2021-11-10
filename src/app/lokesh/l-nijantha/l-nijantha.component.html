@@ -2,14 +2,14 @@
     <div class="recDpCnt">
         <img class="profile-pic" [src]="receiverDp" width="60" height="60">
         <div class="DpName">
-            <h2>Bharath</h2>
+            <h2>Nijantha</h2>
             <p>Last Seen</p>
         </div>
     </div>
 
     <div class="actualMsgCnt">
         <div *ngFor="let i of bLoki"
-            [ngClass]="{'receivedMsg':false, 'sendMsg': i.senderName=='Lokesh', 'msgModel' :true}">
+            [ngClass]="{'receivedMsg':false, 'sendMsg': i.senderName=='nijantha', 'msgModel' :true}">
             <div class="dp"><img class="profile-pic" [src]="receiverDp" width="50" height="50"></div>
             <div class="msgContent">
                 <h3>{{i.senderName}}</h3>

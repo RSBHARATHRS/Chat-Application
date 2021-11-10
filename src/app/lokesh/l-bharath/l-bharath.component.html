@@ -1,6 +1,6 @@
 <div class="msgsCnt">
     <div class="recDpCnt">
-        <img class="profile-pic" [src]="receiverDp" width="60" height="60">
+        <img class="profile-pic" [src]="bharathDpPath" width="60" height="60">
         <div class="DpName">
             <h2>Bharath</h2>
             <p>Last Seen</p>
@@ -10,10 +10,11 @@
     <div class="actualMsgCnt">
         <div *ngFor="let i of bLoki"
             [ngClass]="{'receivedMsg':false, 'sendMsg': i.senderName=='Lokesh', 'msgModel' :true}">
-            <div class="dp"><img class="profile-pic" [src]="receiverDp" width="50" height="50"></div>
+            <div class="dp"><img class="profile-pic" [src]="i.senderDpPath" width="50" height="50"></div>
             <div class="msgContent">
                 <h3>{{i.senderName}}</h3>
                 <p>{{i.msg}}</p>
+                <span class="time">{{i.time}}</span>
             </div>
         </div>
     </div>

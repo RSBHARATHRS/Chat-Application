@@ -3,11 +3,12 @@ import { ChatDataService } from 'src/app/chat-data.service';
 import { ImgPathService } from 'src/app/img-path.service';
 
 @Component({
-  selector: 'app-l-nijantha',
-  templateUrl: './l-nijantha.component.html',
-  styleUrls: ['./l-nijantha.component.css']
+  selector: 'app-n-lokesh',
+  templateUrl: './n-lokesh.component.html',
+  styleUrls: ['./n-lokesh.component.css']
 })
-export class LNijanthaComponent implements OnInit {
+export class NLokeshComponent implements OnInit {
+
 
 
 
@@ -15,14 +16,13 @@ export class LNijanthaComponent implements OnInit {
   receiverName: string;
   receiverDp: string;
   imgPath: string;
-  senderDpPath: string;
+
   msgFlag: any;
 
   bLoki: any;
   constructor(private chatService: ChatDataService, private imgPathService: ImgPathService) {
-    this.senderName = "nijantha";
-    this.receiverDp = imgPathService.nijanthaDp;
-    this.senderDpPath = imgPathService.lokeshDp;
+    this.senderName = "Lokesh";
+    this.receiverDp = imgPathService.lokeshDp;
     this.receiverName = "loki";
     this.imgPath = "";
 
@@ -41,7 +41,6 @@ export class LNijanthaComponent implements OnInit {
     let date = new Date();
     let msgObj = {
       senderName: this.senderName,
-      senderDpPath: this.senderDpPath,
       msg: msg,
       date: date.getTime,
     }
@@ -49,5 +48,4 @@ export class LNijanthaComponent implements OnInit {
     console.log("pushed msg:", this.bLoki);
     this.chatService.upDatebhLo(this.bLoki);
   }
-
 }

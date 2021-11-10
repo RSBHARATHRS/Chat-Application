@@ -8,6 +8,7 @@ export class ChatDataService {
   bhAndLokChat: any;
   bhAndNijanthanChat: any;
   groupChat: any;
+
   constructor() {
     console.log("Chat service");
 

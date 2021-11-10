@@ -10,6 +10,7 @@ import { ImgPathService } from 'src/app/img-path.service';
 export class BLokeshComponent implements OnInit {
 
   senderName: string;
+  senderDpPath: string;
   receiverName: string;
   receiverDp: string;
   imgPath: string;
@@ -19,6 +20,7 @@ export class BLokeshComponent implements OnInit {
   bLoki: any;
   constructor(private chatService: ChatDataService, private imgPathService: ImgPathService) {
     this.senderName = "Bharath";
+    this.senderDpPath = imgPathService.bharathDp;
     this.receiverDp = imgPathService.lokeshDp;
     this.receiverName = "loki";
     this.imgPath = "";
@@ -29,19 +31,23 @@ export class BLokeshComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log("on Init");
+
 
   }
 
   send(msg: any) {
-    console.log("entered msg:", msg);
-    let date = new Date();
+    let date: Date = new Date();
+    console.log(date.toString().slice(16, -31));
+
     let msgObj = {
       senderName: "Bharath",
+      senderDpPath: this.senderDpPath,
       msg: msg,
-      date: date.getTime,
+      time: date.toString().slice(16, -31)
     }
+
     this.bLoki.push(msgObj);
+
     console.log("pushed msg:", this.bLoki);
     this.chatService.upDatebhLo(this.bLoki);
   }
