@@ -13,6 +13,7 @@ export class LBharathComponent implements OnInit {
   senderName: string;
   senderDpPath: string;
   bharathDpPath: string;
+  bhLastSeen: string;
   receiverName: string;
   receiverDp: string;
   imgPath: string;
@@ -25,6 +26,7 @@ export class LBharathComponent implements OnInit {
     this.senderDpPath = imgPathService.bharathDp;
     this.receiverDp = imgPathService.lokeshDp;
     this.bharathDpPath = imgPathService.bharathDp;
+    this.bhLastSeen = chatService.bhLastSeen;
     this.receiverName = "loki";
     this.imgPath = "";
 

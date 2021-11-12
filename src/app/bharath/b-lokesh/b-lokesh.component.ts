@@ -1,6 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, ElementRef, ViewChild, AfterViewChecked } from '@angular/core';
+
 import { ChatDataService } from 'src/app/chat-data.service';
 import { ImgPathService } from 'src/app/img-path.service';
+import { LokeshComponent } from 'src/app/lokesh/lokesh.component';
 
 @Component({
   selector: 'app-b-lokesh',
@@ -18,7 +20,11 @@ export class BLokeshComponent implements OnInit {
   msgFlag: any;
 
   bLoki: any;
+  loLastSeen: string;
+
   constructor(private chatService: ChatDataService, private imgPathService: ImgPathService) {
+
+    this.loLastSeen = chatService.loLastSeen;
     this.senderName = "Bharath";
     this.senderDpPath = imgPathService.bharathDp;
     this.receiverDp = imgPathService.lokeshDp;
@@ -34,6 +40,7 @@ export class BLokeshComponent implements OnInit {
 
 
   }
+
 
   send(msg: any) {
     let date: Date = new Date();
@@ -51,5 +58,7 @@ export class BLokeshComponent implements OnInit {
     console.log("pushed msg:", this.bLoki);
     this.chatService.upDatebhLo(this.bLoki);
   }
+
+
 
 }

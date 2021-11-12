@@ -10,13 +10,13 @@
 }
 
 .active{
-    background-color: green;
+    background-color: green!important;
     color: #fff;
 }
 
 /***/
 .chatInterface{
-    height: 80vh;
+    height: 70vh;
 }
 
 .contactListCnt{
@@ -36,12 +36,27 @@
 
 
 
+.chatBoxHeader{
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
+.chatBoxHeader > img{
+    margin: 0 10px;
+}
 
 
 /**Contact List***/
 .contactListCnt > a{
     text-decoration: none;
+}
+
+.contactListCnt > a:hover{
+    background-color: rgba(163, 156, 156,0.6);
 }
 
 .chatListCard{
@@ -91,7 +106,7 @@
 
 .actualMsgCnt{
     height: 92%;
-    overflow-y: scroll;
+    overflow-y: scroll; 
 }
 
 /***Msg Input****/

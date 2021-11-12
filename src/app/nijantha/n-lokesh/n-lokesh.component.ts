@@ -18,14 +18,14 @@ export class NLokeshComponent implements OnInit {
   imgPath: string;
 
   msgFlag: any;
-
+  loLastSeen: string;
   bLoki: any;
   constructor(private chatService: ChatDataService, private imgPathService: ImgPathService) {
     this.senderName = "Lokesh";
     this.receiverDp = imgPathService.lokeshDp;
     this.receiverName = "loki";
     this.imgPath = "";
-
+    this.loLastSeen = chatService.loLastSeen;
     this.msgFlag = [];
     this.bLoki = chatService.niAndLokichat;
     console.log("b-loki constructor");

@@ -18,10 +18,12 @@ export class BNijanthaComponent implements OnInit {
   msgFlag: any;
 
   tempChatArr: any;
+  niLastSeen: string;
   constructor(private chatService: ChatDataService, private imgPathService: ImgPathService) {
     this.senderName = "Bharath";
     this.senderDpPath = imgPathService.bharathDp;
     this.receiverDp = imgPathService.nijanthaDp;
+    this.niLastSeen = chatService.niLastSeen;
     this.receiverName = "loki";
     this.imgPath = "";
 

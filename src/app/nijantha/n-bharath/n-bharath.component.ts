@@ -17,12 +17,13 @@ export class NBharathComponent implements OnInit {
   msgFlag: any;
 
   bLoki: any;
+  bhLastSeen: string;
   constructor(private chatService: ChatDataService, private imgPathService: ImgPathService) {
     this.senderName = "Lokesh";
     this.receiverDp = imgPathService.bharathDp;
     this.receiverName = "loki";
     this.imgPath = "";
-
+    this.bhLastSeen = chatService.bhLastSeen;
     this.msgFlag = [];
     this.bLoki = chatService.bhAndNijanthanChat;
     console.log("b-loki constructor");

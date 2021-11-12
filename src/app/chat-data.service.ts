@@ -10,6 +10,10 @@ export class ChatDataService {
   groupChat: any;
   niAndLokichat: any;
 
+  bhLastSeen: string;
+  loLastSeen: string;
+  niLastSeen: string;
+
   constructor() {
     console.log("Chat service");
 
@@ -17,6 +21,10 @@ export class ChatDataService {
     this.bhAndNijanthanChat = [];
     this.groupChat = [];
     this.niAndLokichat = [];
+
+    this.bhLastSeen = "00:00:00";
+    this.loLastSeen = "00:00:00";
+    this.niLastSeen = "00:00:00";
   }
 
   upDatebhLo(tempArr: any) {

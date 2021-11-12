@@ -3,11 +3,11 @@
         <img class="profile-pic" [src]="receiverDp" width="60" height="60">
         <div class="DpName">
             <h2>Lokesh</h2>
-            <p>Last Seen</p>
+            <p>{{loLastSeen}}</p>
         </div>
     </div>
 
-    <div class="actualMsgCnt">
+    <div class="actualMsgCnt" #scrollMe [scrollTop]="scrollMe.scrollHeight">
         <div *ngFor="let i of bLoki"
             [ngClass]="{'receivedMsg':false, 'sendMsg': i.senderName=='Bharath', 'msgModel' :true}">
             <div class="dp"><img class="profile-pic" [src]="i.senderDpPath" width="50" height="50"></div>

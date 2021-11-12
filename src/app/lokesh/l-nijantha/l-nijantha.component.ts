@@ -19,13 +19,14 @@ export class LNijanthaComponent implements OnInit {
   msgFlag: any;
 
   bLoki: any;
+  niLastSeen: string;
   constructor(private chatService: ChatDataService, private imgPathService: ImgPathService) {
     this.senderName = "nijantha";
     this.receiverDp = imgPathService.nijanthaDp;
     this.senderDpPath = imgPathService.lokeshDp;
     this.receiverName = "loki";
     this.imgPath = "";
-
+    this.niLastSeen = chatService.niLastSeen;
     this.msgFlag = [];
     this.bLoki = chatService.niAndLokichat;
     console.log("b-loki constructor");
