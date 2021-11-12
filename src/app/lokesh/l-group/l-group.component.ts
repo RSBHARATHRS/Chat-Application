@@ -49,7 +49,7 @@ export class LGroupComponent implements OnInit {
     this.groupArr.push(msgObj);
 
     console.log("pushed msg:", this.groupArr);
-    this.chatService.upDatebhLo(this.groupArr);
+    this.chatService.upDategroup(this.groupArr);
   }
 
 

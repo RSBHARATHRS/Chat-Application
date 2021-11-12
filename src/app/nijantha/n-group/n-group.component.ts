@@ -21,7 +21,7 @@ export class NGroupComponent implements OnInit {
   groupArr: any;
   constructor(private chatService: ChatDataService, private imgPathService: ImgPathService) {
     this.senderName = "nijantha";
-    this.senderDpPath = imgPathService.bharathDp;
+    this.senderDpPath = imgPathService.nijanthaDp;
     this.receiverDp = imgPathService.lokeshDp;
     this.groupDp = imgPathService.groupDp;
     this.receiverName = "loki";
@@ -49,7 +49,7 @@ export class NGroupComponent implements OnInit {
     this.groupArr.push(msgObj);
 
     console.log("pushed msg:", this.groupArr);
-    this.chatService.upDatebhLo(this.groupArr);
+    this.chatService.upDategroup(this.groupArr);
   }
 
 

@@ -48,7 +48,7 @@ export class BNijanthaComponent implements OnInit {
     this.tempChatArr.push(msgObj);
 
     console.log("pushed msg:", this.tempChatArr);
-    this.chatService.upDatebhLo(this.tempChatArr);
+    this.chatService.upDatebhni(this.tempChatArr);
   }
 
 }

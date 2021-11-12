@@ -27,7 +27,7 @@ export class LNijanthaComponent implements OnInit {
     this.imgPath = "";
 
     this.msgFlag = [];
-    this.bLoki = chatService.bhAndLokChat;
+    this.bLoki = chatService.niAndLokichat;
     console.log("b-loki constructor");
   }
 
@@ -47,7 +47,7 @@ export class LNijanthaComponent implements OnInit {
     }
     this.bLoki.push(msgObj);
     console.log("pushed msg:", this.bLoki);
-    this.chatService.upDatebhLo(this.bLoki);
+    this.chatService.upDatenilo(this.bLoki);
   }
 
 }

@@ -9,9 +9,6 @@ import { ImgPathService } from 'src/app/img-path.service';
 })
 export class NBharathComponent implements OnInit {
 
-
-
-
   senderName: string;
   receiverName: string;
   receiverDp: string;
@@ -27,7 +24,7 @@ export class NBharathComponent implements OnInit {
     this.imgPath = "";
 
     this.msgFlag = [];
-    this.bLoki = chatService.bhAndLokChat;
+    this.bLoki = chatService.bhAndNijanthanChat;
     console.log("b-loki constructor");
   }
 
@@ -46,7 +43,7 @@ export class NBharathComponent implements OnInit {
     }
     this.bLoki.push(msgObj);
     console.log("pushed msg:", this.bLoki);
-    this.chatService.upDatebhLo(this.bLoki);
+    this.chatService.upDatebhni(this.bLoki);
   }
 
 }

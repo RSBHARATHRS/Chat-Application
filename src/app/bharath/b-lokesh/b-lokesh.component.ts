@@ -40,7 +40,7 @@ export class BLokeshComponent implements OnInit {
     console.log(date.toString().slice(16, -31));
 
     let msgObj = {
-      senderName: "Bharath",
+      senderName: this.senderName,
       senderDpPath: this.senderDpPath,
       msg: msg,
       time: date.toString().slice(16, -31)

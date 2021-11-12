@@ -96,7 +96,7 @@
 
 /***Msg Input****/
 .msgsCnt{
-    height: 84vh;
+    height: 81vh;
     position: relative;
     
 }
@@ -133,6 +133,8 @@
 .inputCnt > input{
     width: 70%;
     font-size: 26px;
+    border-radius: 20px;
+    padding: 8px;
 }
 
 .inputCnt > button{
