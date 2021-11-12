@@ -21,7 +21,7 @@ export class LNijanthaComponent implements OnInit {
   bLoki: any;
   niLastSeen: string;
   constructor(private chatService: ChatDataService, private imgPathService: ImgPathService) {
-    this.senderName = "nijantha";
+    this.senderName = "lokesh";
     this.receiverDp = imgPathService.nijanthaDp;
     this.senderDpPath = imgPathService.lokeshDp;
     this.receiverName = "loki";
@@ -44,7 +44,7 @@ export class LNijanthaComponent implements OnInit {
       senderName: this.senderName,
       senderDpPath: this.senderDpPath,
       msg: msg,
-      date: date.getTime,
+      time: date.toString().slice(16, -31)
     }
     this.bLoki.push(msgObj);
     console.log("pushed msg:", this.bLoki);

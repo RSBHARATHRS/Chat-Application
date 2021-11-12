@@ -23,7 +23,7 @@ export class LBharathComponent implements OnInit {
   bLoki: any;
   constructor(private chatService: ChatDataService, private imgPathService: ImgPathService) {
     this.senderName = "Lokesh";
-    this.senderDpPath = imgPathService.bharathDp;
+    this.senderDpPath = imgPathService.lokeshDp;
     this.receiverDp = imgPathService.lokeshDp;
     this.bharathDpPath = imgPathService.bharathDp;
     this.bhLastSeen = chatService.bhLastSeen;

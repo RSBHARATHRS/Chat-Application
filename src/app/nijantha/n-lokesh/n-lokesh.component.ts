@@ -20,9 +20,11 @@ export class NLokeshComponent implements OnInit {
   msgFlag: any;
   loLastSeen: string;
   bLoki: any;
+  senderDpPath: string;
   constructor(private chatService: ChatDataService, private imgPathService: ImgPathService) {
-    this.senderName = "Lokesh";
+    this.senderName = "nijantha";
     this.receiverDp = imgPathService.lokeshDp;
+    this.senderDpPath = imgPathService.nijanthaDp;
     this.receiverName = "loki";
     this.imgPath = "";
     this.loLastSeen = chatService.loLastSeen;
@@ -41,8 +43,9 @@ export class NLokeshComponent implements OnInit {
     let date = new Date();
     let msgObj = {
       senderName: this.senderName,
+      senderDpPath: this.senderDpPath,
       msg: msg,
-      date: date.getTime,
+      time: date.toString().slice(16, -31)
     }
     this.bLoki.push(msgObj);
     console.log("pushed msg:", this.bLoki);
