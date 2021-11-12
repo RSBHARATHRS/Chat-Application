@@ -81,8 +81,15 @@
 .sendMsg{
     display: flex;
     flex-direction: row-reverse;
+    background-color: rgba(92, 12, 149,0.6);
+
 }
 
+.rightMsg{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
 
 .msgModel{
     padding: 6px;
@@ -90,6 +97,7 @@
     margin: 6px;
     border-radius: 10px;
     flex-wrap: wrap;
+    width: fit-content;
 }
 
 .time{

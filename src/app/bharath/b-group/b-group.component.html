@@ -8,13 +8,14 @@
     </div>
 
     <div class="actualMsgCnt">
-        <div *ngFor="let i of groupArr"
-            [ngClass]="{'receivedMsg':false, 'sendMsg': i.senderName=='Bharath', 'msgModel' :true}">
-            <div class="dp"><img class="profile-pic" [src]="i.senderDpPath" width="50" height="50"></div>
-            <div class="msgContent">
-                <h3>{{i.senderName}}</h3>
-                <p>{{i.msg}}</p>
-                <span class="time">{{i.time}}</span>
+        <div [ngClass]="{'rightMsg':i.senderName=='Bharath'}" *ngFor="let i of groupArr">
+            <div [ngClass]="{'receivedMsg':false, 'sendMsg': i.senderName=='Bharath', 'msgModel' :true}">
+                <div class="dp"><img class="profile-pic" [src]="i.senderDpPath" width="50" height="50"></div>
+                <div class="msgContent">
+                    <h3>{{i.senderName}}</h3>
+                    <p>{{i.msg}}</p>
+                    <span class="time">{{i.time}}</span>
+                </div>
             </div>
         </div>
     </div>
