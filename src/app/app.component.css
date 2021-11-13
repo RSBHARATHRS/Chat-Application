@@ -15,4 +15,6 @@ nav > ul > li{
 nav ul li a{
     text-decoration: none;
     font-size: 26px;
+    color: indigo;
+    text-shadow: 2px 2px 2px #fff;
 }

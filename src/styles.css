@@ -81,7 +81,7 @@
 .sendMsg{
     display: flex;
     flex-direction: row-reverse;
-    background-color: rgba(92, 12, 149,0.6);
+    background-image: linear-gradient(rgba(55, 143, 165, 0.685),#ddd);
 
 }
 
@@ -119,7 +119,7 @@
 
 /***Msg Input****/
 .msgsCnt{
-    height: 81vh;
+    height: 74vh;
     position: relative;
     
 }
@@ -150,18 +150,15 @@
     right: 0;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 
 .inputCnt > input{
-    width: 70%;
+    width: 80%;
     font-size: 26px;
     border-radius: 20px;
     padding: 8px;
 }
 
-.inputCnt > button{
-    padding: 10px;
-    background-color: green;
-}
 /****---------**/
