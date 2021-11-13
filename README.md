@@ -3,4 +3,8 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.9.
 
 ## Screen Shots
-![GitHub Logo](/Screen Shots/ss1.jpg)
+<img src="Screen Shots/ss1.png"/> 
+<hr>
+<img src="Screen Shots/ss2.png"/>
+<hr>
+<img src="Screen Shots/ss3.png"/>
